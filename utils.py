@@ -6,9 +6,9 @@ def draw_line(slope, y_intercept, color='grey', linewidth=0.7, starting=0, endin
     x = np.linspace(starting, ending, 1000)
     pyplot.plot(x, y_intercept + slope*x, linestyle='-', color=color, linewidth=linewidth)
 
-def plot_points(features, labels):
+def plot_points(features, labels, x_label: str = 'number of rooms 1111', y_label: str = 'prices 2222'):
     X = np.array(features)
     y = np.array(labels)
     pyplot.scatter(X, y)
-    pyplot.xlabel('number of rooms')
-    pyplot.ylabel('prices')
+    pyplot.xlabel(x_label)
+    pyplot.ylabel(y_label)
